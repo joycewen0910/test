@@ -1,0 +1,33 @@
+# Dependencies
+#markdown:         redcarpet
+##highlighter:      pygments
+
+# Permalinks
+#permalink:        pretty
+#relative_permalinks: true
+
+# Setup
+title: test Note
+tagline: testTag
+description: testDescription
+url: https://tw.yahoo.com/
+baseurl: /
+image: https://www.google.com.tw/url?sa=i&source=images&cd=&ved=2ahUKEwjDysvrj5_gAhVKqYsKHUVIDiEQjRx6BAgBEAU&url=http%3A%2F%2Fwish.cat2.me%2F8458&psig=AOvVaw34xVTmmfR3CdRFh2myzhV2&ust=1549268160381686
+fbappid: 
+
+author:
+  name: 'jj ww'
+#  url: https://twitter.com/mdo
+
+paginate: 5
+
+github:
+  repo: https://github.com/davidyujia
+
+defaults:
+  -
+    scope:
+      path: _posts
+    values:
+      layout: post
+      index: archives

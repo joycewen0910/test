@@ -1,0 +1,40 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>{{ page.title }} &middot; {{ site.title }}</title>{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}" />{% endif %}
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title }}" />{% if page.desc %}
+  <meta name=“description” content="{{ page.desc }}">
+  <meta property="og:description" content="{{ page.desc }}" />{% endif %}{% if page.layout == "post" %}
+  <meta property="og:type" content="article" />{% else %}
+  <meta content="website" property="og:type">{% endif %}{% if site.fbappid %}
+  <meta property="fb:app_id" content="article" />{% endif %}{% if site.github.repo %}
+  <meta property='article:author' content="{{ site.github.repo }}" />{% endif %}
+  <meta property='og:url' content="{{ site.url }}{{ page.url }}" />{% if page.tags %}{% for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag }}">{% endfor %}{% endif %}{% if page.image %}
+  <meta property="og:image" content="{{ page.image }}" />{% elsif site.image %}
+  <meta property="og:image" content="{{ site.image }}" />{% endif %}
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ 'public/css/poole.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/syntax.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/hyde.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'public/css/site.css' | relative_url }}">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122167031-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122167031-1');
+  </script>
+  <!-- Last update: {{site.time | date: "%x %R %Z"}} -->
+</head>

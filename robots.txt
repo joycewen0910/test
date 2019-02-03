@@ -1,0 +1,6 @@
+---
+title: robots
+---
+User-agent : *
+Disallow : /public/
+Sitemap: <{{site.url}}/sitemap.xml>

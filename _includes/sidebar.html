@@ -1,0 +1,21 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ '/' | relative_url }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.index == 'home' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+      <a class="sidebar-nav-item{% if page.index == 'archives' %} active{% endif %}" href="{{ '/archives' | relative_url }}">Archives</a>
+      <a class="sidebar-nav-item{% if page.index == 'about' %} active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
+    </nav>
+
+    <p class="copyright">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
