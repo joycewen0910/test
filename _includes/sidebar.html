@@ -11,6 +11,7 @@
 
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.index == 'home' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+<a class="sidebar-nav-item{% if page.index == 'testPage1' %} active{% endif %}" href="{{ '/testPage1' | relative_url }}">testPage1</a>
       <a class="sidebar-nav-item{% if page.index == 'archives' %} active{% endif %}" href="{{ '/archives' | relative_url }}">Archives</a>
       <a class="sidebar-nav-item{% if page.index == 'about' %} active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
